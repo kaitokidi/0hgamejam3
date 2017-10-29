@@ -122,6 +122,15 @@ int main(int argc, const char* argv[]){
             }
         }
 
+        if (sf::Touch::isDown(0)) {
+            for (Penguin& penguin : penguins){
+                if(penguin.getGlobalBounds().contains(sf::Vector2f(sf::Touch::getPosition(0, window)))){
+                    penguin.setVel(sf::Vector2f(rand()%100-50.0f, -200.0f));
+                    penguin.setTexture(penguinUp);
+                }
+            }
+        }
+
         for(int i = 0; i < penguins.size(); ++i){
             float penguinsize = penguins[i].getGlobalBounds().width/2;
             if(penguins[i].getPosition().x - penguinsize < 0 && penguins[i].vel.x < 0) penguins[i].vel.x *= -1;
