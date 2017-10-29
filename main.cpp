@@ -6,10 +6,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "button.h"
 #include "Portada.hpp"
-#include "TextScreen.hpp"
-#include "MenuSelection.hpp"
 
 struct Penguin : public sf::Sprite {
   Penguin() {

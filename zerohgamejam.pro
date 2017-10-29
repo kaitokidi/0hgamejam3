@@ -8,9 +8,7 @@ QMAKE_CXXFLAGS += -std=c++11
 
 SOURCES += main.cpp \
     Portada.cpp \
-    MenuSelection.cpp \
 
 HEADERS += \
     main.hpp \
     Portada.hpp \
-    MenuSelection.hpp \
